@@ -1,0 +1,15 @@
+.dropdown li{
+    display: inline-flex;
+    margin: 10px;
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.dropdown {
+    display: inline-flex;
+    border: 2px solid gray;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+}
