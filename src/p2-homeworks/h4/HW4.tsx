@@ -28,7 +28,7 @@ function HW4() {
                 <SuperInputText value={text} onChangeText={setText} onEnter={showAlert} spanClassName={s.testSpanError} className={s.testInputClassName} error = {error}/>
 
 
-               {/* <SuperInputText className={s.blue} /> // проверьте, работает ли смешивание классов*/}
+                <SuperInputText className={s.blue} /> // проверьте, работает ли смешивание классов
 
 
                 {/*----------------------------------------------------*/}
