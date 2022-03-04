@@ -1,16 +1,15 @@
-.superInput {
-
-}
 
 .input{
-    border: 1px solid black;
+    margin: 10px;
+
 }
 
-.errorInput {
 
+.errorInput {
+    border: 2px solid red;
     border-radius: 15px;
     padding: 7px;
-    background: red;
+    background-color: red;
 }
 
 .errorInputOn {
@@ -20,8 +19,6 @@
     background: red;
 }
 
-
-
 .error {
     color: red;
     padding: 10px;
@@ -30,8 +27,8 @@
 }
 
 .superInput{
-    border: 1px solid black;
+    border: 2px solid grey;
     border-radius: 15px;
     padding: 7px;
-    background: yellow;
+    background: wheat;
 }

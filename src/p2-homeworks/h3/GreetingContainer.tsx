@@ -1,6 +1,7 @@
 import React, {ChangeEvent, useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from "./HW3";
+import s from './Greeting.module.css'
 
 type GreetingContainerPropsType = {
     users: Array<UserType> // need to fix any
@@ -14,7 +15,7 @@ type GreetingContainerPropsType = {
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => { // деструктуризация пропсов
     const [name, setName] = useState<string>('') // need to fix any
-    const [error, setError] = useState<null | 'error'>(null) // need to fix any
+    const [error, setError] = useState<null | 'Field is required'>(null) // need to fix any
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => { // need to fix any
         let text = e.currentTarget.value
@@ -28,7 +29,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             setName('')
             alert(`Hello, ${name}!`)
         } else {
-            setError('error')
+            setError('Field is required')
         }
 
         // need to fix
@@ -37,6 +38,8 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const totalUsers = users.length // need to fix
 
     return (
+
+        <div className={s.HW3}>
         <Greeting
             name={name}
             setNameCallback={setNameCallback}
@@ -44,6 +47,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
             error={error}
             totalUsers={totalUsers}
         />
+        </div>
     )
 }
 

@@ -18,7 +18,7 @@ function HW3() {
     }
 
     return (
-        <div>
+        <div >
             <hr/>
             homeworks 3
 
