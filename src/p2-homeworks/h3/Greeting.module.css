@@ -76,6 +76,7 @@
     max-width: 650px;
     border: 1px solid black;
     border-radius: 50px;
+    margin: 20px;
 }
 
 .totalUser {
@@ -91,4 +92,9 @@
     cursor: pointer;
     vertical-align: center;
     margin-right: 10px;
+}
+
+.superButton{
+    display: inline-block;
+
 }

@@ -18,9 +18,11 @@ const SuperButton: React.FC<SuperButtonPropsType> = (
 
     const finalClassName = `${red ? `${s.btn} ${s.first}` : `${s.default} ${s.first1}`} ${className}`
 
+    const disabledStyle = s.disabled
+
     return (
         <button
-            className={finalClassName}
+            className={restProps.disabled ? disabledStyle : finalClassName}
             {...restProps} // отдаём кнопке остальные пропсы если они есть (children там внутри)
         />
         )

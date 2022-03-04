@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import Affairs from './Affairs'
+import s from './Affairs.module.css'
+
 
 // types
 export type AffairPriorityType = 'high' | 'low' | 'middle' // need to fix any
@@ -47,7 +49,7 @@ let [text, setText] = useState('text')
     /////////////////////////
 
     return (
-        <div>
+        <div className={s.HW2}>
             <hr/>
             homeworks 2
 
