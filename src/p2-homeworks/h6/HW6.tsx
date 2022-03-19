@@ -10,8 +10,10 @@ function HW6() {
         saveState<string>('editable-span-value', value)
     }
     const restore = () => {
-        // setValue()
-    }
+        let valueFromLocalStorage = localStorage.getItem('editable-span-value')
+        if(valueFromLocalStorage ) {
+            setValue(valueFromLocalStorage.replace(/^.|.$/g,""))
+        }}
 
     return (
         <div>

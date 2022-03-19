@@ -15,24 +15,43 @@ const SuperRadio: React.FC<SuperRadioPropsType> = (
         ...restProps
     }
 ) => {
-    const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        // onChange, onChangeOption
+
+    const onChangeCallback = (el: string) => {
+        onChangeOption && onChangeOption(el)
+
     }
 
 
-    const mappedOptions: any[] = options ? options.map((o, i) => ( // map options with key
-        <label key={name + '-' + i}>
-            <input
-                type={'radio'}
-                // name, checked, value, onChange
-            />
+
+
+    const mappedOptions: any[] = options ? options.map((o, i) => {
+
+        return <label key={name + '-' + i}>
+            <input type={'radio'} name={'radioGroup1'} checked={o === value}
+                   onChange={()=>{onChangeCallback(o)}} />
             {o}
         </label>
-    )) : []
+    }) : []
+
+
+    const mappedOptions2: any[] = options ? options.map((o, i) => {
+
+        return <label key={name + '-' + i}>
+            <input type={'radio'} name={'radioGroup2'}
+                    />
+            {o}
+        </label>
+    }) : []
+
 
     return (
         <>
-            {mappedOptions}
+            <div>
+            {mappedOptions} - эти в связке с useState из HW7
+        </div>
+            <div>
+            {mappedOptions2}
+            </div>
         </>
     )
 }
